@@ -7,7 +7,7 @@ public class Controller {
 
     @GetMapping("/index")
     public String getIndex() {
-        return "index.html";
+        return "index";
     }
 
 }
