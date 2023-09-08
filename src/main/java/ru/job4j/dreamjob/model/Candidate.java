@@ -17,11 +17,6 @@ public class Candidate {
         this.creationDate = creationDate;
     }
 
-    public Candidate(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     public int getId() {
         return id;
     }
