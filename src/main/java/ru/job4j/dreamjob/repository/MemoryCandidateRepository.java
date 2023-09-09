@@ -35,8 +35,9 @@ public class MemoryCandidateRepository implements CandidateRepository {
     }
 
     @Override
-    public void deleteById(int id) {
-        candidates.remove(id);
+    public boolean deleteById(int id) {
+        var candidate = candidates.remove(id);
+        return candidate != null;
     }
 
     @Override
