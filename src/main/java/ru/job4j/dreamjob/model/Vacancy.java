@@ -8,18 +8,20 @@ public class Vacancy {
     private int id;
     private String title;
     private String description;
-    private boolean visible;
     private LocalDateTime creationDate = LocalDateTime.now();
+    private boolean visible;
+    private int cityId;
 
-    public Vacancy(int id, String title, String description, LocalDateTime creationDate, boolean visible) {
+    public Vacancy() {
+    }
+
+    public Vacancy(int id, String title, String description, LocalDateTime creationDate, boolean visible, int cityId) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = creationDate;
         this.visible = visible;
-    }
-
-    public Vacancy() {
+        this.cityId = cityId;
     }
 
     public int getId() {
@@ -77,5 +79,13 @@ public class Vacancy {
 
     public void setVisible(boolean visible) {
         this.visible = visible;
+    }
+
+    public int getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
     }
 }
